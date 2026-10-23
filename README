@@ -1,0 +1,17 @@
+In this folder, some data corresponding to the ground state of ethylene, water and formaldehyde are provided.
+In each folder, you can find as printouts, the orbital coefficeints, the overlap (in AO), the state density in AOs and MOs.
+Furthermore, the output from the CASSCF calculation in CFOUR is given, as well as its input geometry (ZMAT file). 
+The data-gad.bin provides the necessary information on the states and can be read by the routine in read_cfour.py:
+this gives
+[n_int, n_act, n_ext]: number of internal, active and external orbitals
+[n_a, n_b]: number of alfa and beta spin electrons
+ ene:energy of the state
+ c, C,: the c, C coefficeints associated to the CASSCF state
+ S: overlap matrix
+ rdm1: 1-el density matrix
+ [g_ci, g_k]: Casscf gradient (CI part and orbital rotation part)
+ [diag_ci, (diag_k_AI, diag_k_EI, diag_k_EA)]
+ [Hx_ci, Hx_k]:Hessian-vector prodicts, Ci and orbital parts
+ spin:
+ mult: multiplicity
+
