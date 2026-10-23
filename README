@@ -15,3 +15,11 @@ this gives
  spin:
  mult: multiplicity
 
+All calculations are done without point group symmetry
+
+
+------------------------------------------------------
+In the folder water_block2, there are the calculations done with DMRG-CASSCF in a state averaged approach.
+The input file contains the geometry and the indication of the targeted spin states
+the output file contains the converged energies and the associated density matriced (the orbital occupation numbers).
+All calculations have been done without point-group symmetry

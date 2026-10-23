@@ -1,0 +1,646 @@
+
+********************************** INPUT START **********************************
+sym                                                             c1
+orbitals                                                   FCIDUMP
+nelec                                                            8
+irrep                                                            1
+nroots                                                           3
+spin                                                         0 2 0
+weights                                       0.3333 0.3333 0.3333
+hf_occ                                                    integral
+schedule                  Sweep   0-   7 : Mmps =    50 Noise =    0.0001 DavTol =     1e-05
+                          Sweep   8-  15 : Mmps =    50 Noise =     0.001 DavTol =    0.0001
+                          Sweep  16-  37 : Mmps =    50 Noise =         0 DavTol =     1e-06
+startM                                                          50
+maxM                                                            50
+maxiter                                                         30
+sweep_tol                                                     1E-5
+twodot_to_onedot                                                10
+********************************** INPUT END   **********************************
+
+SPIN ADAPTED - REAL DOMAIN - DOUBLE PREC
+qc mpo type =  QCTypes.Conventional
+ UseMainStack = 0 MinDiskUsage = 1 MinMemUsage = 0 IBuf = 0 OBuf = 0
+ FPCompression: prec = 1.00e-16 chunk = 1024
+ IMain = 0 B / 134 MB DMain = 0 B / 687 MB ISeco = 0 B / 57.2 MB DSeco = 0 B / 1.01 GB
+ OpenMP = 1 TBB = 0 BLIS = 0 MKL = NONE  SeqType = Tasked MKLIntLen = 4
+ THREADING = 2 layers : Global | Operator BatchedGEMM 
+ NUMBER : Global = 1 Operator = 1 Quanta = 0 MKL = 1
+ COMPLEX = 1 SINGLE-PREC = 1 KSYMM = 0
+using fiedler reorder =  [4 5 1 0 2 3]
+read integral finished 0.0026006230036728084
+integral sym error =            0
+MinMPOMemUsage =  False
+TARGETS =  [< N=8 S=0 PG=0 >, < N=8 S=1 PG=0 >, < N=8 S=0 PG=0 >]
+MPS =  MMRRRR 0 2 [< N=8 S=0 PG=0 >, < N=8 S=1 PG=0 >, < N=8 S=0 PG=0 >]
+GS INIT MPS BOND DIMS =       1     3    10    19    17     6     2
+pre-mpo memory usage =  122 MB
+build mpo start ...
+build mpo finished ... Tread = 0.000 Twrite = 0.000 T = 0.001
+simpl mpo start ...
+simpl mpo finished ... Tread = 0.000 Twrite = 0.000 T = 0.002
+GS MPO BOND DIMS =      11    18    29    18    11     1
+build 1pdm mpo 0.024270649009849876
+build identity mpo 0.02473200899839867
+memory usage =  123 MB
+para mpo finished 0.025198846007697284
+Environment initialization | Nsites =     6 | Center =     0
+ INIT-R <-- Site =    3 ..  Bmem =   184 B Rmem =   184 B T = 0.00
+ INIT-R <-- Site =    2 ..  Bmem = 2.35 KB Rmem = 6.34 KB T = 0.00
+ INIT-R <-- Site =    1 ..  Bmem = 32.5 KB Rmem = 12.5 KB T = 0.00
+ INIT-R <-- Site =    0 ..  Bmem = 76.5 KB Rmem = 6.31 KB T = 0.00
+Time init sweep =        0.005 | MaxBmem = 76.5 KB | MaxRmem = 6.31 KB
+ | Tread = 0.000 | Twrite = 0.001 | Tfpread = 0.000 | Tfpwrite = 0.000 | data = 24.2 KB | cpsd = 17.4 KB | Tasync = 0.000
+
+env init finished 0.03276248100155499
+
+Sweep =    0 | Direction =  forward | Bond dimension =   50 | Noise =  1.00e-04 | Dav threshold =  1.00e-05
+ --> Site =    0-   1 .. Mmps =    3 Ndav =4000 Error = 0.00e+00 FLOPS = 6.82e+07 Tdav = 0.69
+          .. E[  0] = -43862.26053751     < N=8 S=0 PG=0 > (39.760312)     < N=8 S=1 PG=0 > (17.000457)     < N=8 S=0 PG=0 > (2.268392)
+          .. E[  1] =    -52.41636313     < N=8 S=0 PG=0 > (33.599493)     < N=8 S=1 PG=0 > (26.797407)     < N=8 S=0 PG=0 > (2.521410)
+          .. E[  2] =    -52.41636313     < N=8 S=0 PG=0 > (6.983898)     < N=8 S=1 PG=0 > (4.889628)     < N=8 S=0 PG=0 > (0.686287) T = 0.69
+ --> Site =    1-   2 .. Mmps =   10 Ndav = 189 Error = 0.00e+00 FLOPS = 1.77e+08 Tdav = 0.06
+          .. E[  0] =    -75.99427073     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70151003     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68369896     < N=8 S=0 PG=0 > (0.999996)     < N=8 S=1 PG=0 > (0.002942) T = 0.07
+ --> Site =    2-   3 .. Mmps =   31 Ndav =  28 Error = 0.00e+00 FLOPS = 2.57e+08 Tdav = 0.01
+          .. E[  0] =    -75.99429493     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185006     < N=8 S=1 PG=0 > (0.999999)     < N=8 S=0 PG=0 > (0.001064)
+          .. E[  2] =    -75.68320663     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001176) T = 0.02
+ --> Site =    3-   4 .. Mmps =   50 Ndav =   3 Error = 3.11e-08 FLOPS = 5.30e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430084     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185003     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309625     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001114) T = 0.01
+ --> Site =    4-   5 .. Mmps =   48 Ndav =   3 Error = 1.99e-14 FLOPS = 1.13e+09 Tdav = 0.00
+          .. E[  0] =    -75.99430085     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185004     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309626     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001111) T = 0.00
+Time elapsed =      0.786 | E[  3] =     -75.9942707258    -75.7015100313    -75.6836989628 | DW = 3.11396e-08
+Time sweep =        0.786 | 58.6 MFLOP/SWP
+ | Dmem = 68.1 KB (14%) | Imem = 29.4 KB (96%) | Hmem = 251 KB | Wmem = 7.38 KB | Pmem = 7.81 KB
+ | Tread = 0.000 | Twrite = 0.001 | Tfpread = 0.000 | Tfpwrite = 0.000 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 96.1 KB | cpsd = 60.1 KB
+ | Trot = 0.000 | Tctr = 0.000 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.004 | Tprt = 0.006 | Teig = 0.763 | Tblk = 0.782 | Tmve = 0.004 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Sweep =    1 | Direction = backward | Bond dimension =   50 | Noise =  1.00e-04 | Dav threshold =  1.00e-05
+ <-- Site =    4-   5 .. Mmps =    3 Ndav =   3 Error = 0.00e+00 FLOPS = 1.18e+09 Tdav = 0.00
+          .. E[  0] =    -75.99430085     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185004     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309626     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001111) T = 0.00
+ <-- Site =    3-   4 .. Mmps =   10 Ndav =   3 Error = 0.00e+00 FLOPS = 3.11e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430085     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185004     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309626     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001111) T = 0.01
+ <-- Site =    2-   3 .. Mmps =   31 Ndav =   3 Error = 0.00e+00 FLOPS = 1.76e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430085     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185004     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309626     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001111) T = 0.01
+ <-- Site =    1-   2 .. Mmps =   50 Ndav =   3 Error = 1.55e-07 FLOPS = 4.27e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430085     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185004     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309626     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001111) T = 0.01
+ <-- Site =    0-   1 .. Mmps =   50 Ndav =   3 Error = 2.02e-14 FLOPS = 6.72e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430085     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309628     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001110) T = 0.01
+Time elapsed =      0.816 | E[  3] =     -75.9943008531    -75.7018500504    -75.6830962795 | DE = 6.03e-04 | DW = 1.55111e-07
+Time sweep =        0.030 | 1.30 MFLOP/SWP
+ | Dmem = 68.7 KB (14%) | Imem = 29.4 KB (96%) | Hmem = 275 KB | Wmem = 7.38 KB | Pmem = 7.81 KB
+ | Tread = 0.000 | Twrite = 0.001 | Tfpread = 0.000 | Tfpwrite = 0.000 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 96.7 KB | cpsd = 70.9 KB
+ | Trot = 0.000 | Tctr = 0.000 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.004 | Tprt = 0.006 | Teig = 0.004 | Tblk = 0.025 | Tmve = 0.004 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Sweep =    2 | Direction =  forward | Bond dimension =   50 | Noise =  1.00e-04 | Dav threshold =  1.00e-05
+ --> Site =    0-   1 .. Mmps =    3 Ndav =   3 Error = 0.00e+00 FLOPS = 1.24e+09 Tdav = 0.00
+          .. E[  0] =    -75.99430085     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309628     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001110) T = 0.00
+ --> Site =    1-   2 .. Mmps =   10 Ndav =   3 Error = 0.00e+00 FLOPS = 6.16e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430085     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309628     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001110) T = 0.01
+ --> Site =    2-   3 .. Mmps =   31 Ndav =   3 Error = 0.00e+00 FLOPS = 2.56e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430085     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309628     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001110) T = 0.01
+ --> Site =    3-   4 .. Mmps =   50 Ndav =   3 Error = 1.77e-08 FLOPS = 5.36e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430085     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309628     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001110) T = 0.01
+ --> Site =    4-   5 .. Mmps =   49 Ndav =   3 Error = 1.36e-14 FLOPS = 1.02e+09 Tdav = 0.00
+          .. E[  0] =    -75.99430084     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001108) T = 0.00
+Time elapsed =      0.843 | E[  3] =     -75.9943008358    -75.7018500533    -75.6830962937 | DE = -1.42e-08 | DW = 1.77341e-08
+Time sweep =        0.027 | 1.30 MFLOP/SWP
+ | Dmem = 69.5 KB (14%) | Imem = 29.4 KB (96%) | Hmem = 275 KB | Wmem = 7.38 KB | Pmem = 7.81 KB
+ | Tread = 0.000 | Twrite = 0.001 | Tfpread = 0.000 | Tfpwrite = 0.000 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 97.5 KB | cpsd = 60.9 KB
+ | Trot = 0.000 | Tctr = 0.000 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.005 | Tprt = 0.005 | Teig = 0.003 | Tblk = 0.022 | Tmve = 0.004 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Sweep =    3 | Direction = backward | Bond dimension =   50 | Noise =  1.00e-04 | Dav threshold =  1.00e-05
+ <-- Site =    4-   5 .. Mmps =    3 Ndav =   3 Error = 0.00e+00 FLOPS = 1.18e+09 Tdav = 0.00
+          .. E[  0] =    -75.99430084     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001108) T = 0.00
+ <-- Site =    3-   4 .. Mmps =   10 Ndav =   3 Error = 0.00e+00 FLOPS = 4.80e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430084     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001108) T = 0.01
+ <-- Site =    2-   3 .. Mmps =   31 Ndav =   3 Error = 0.00e+00 FLOPS = 2.50e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430084     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001108) T = 0.01
+ <-- Site =    1-   2 .. Mmps =   50 Ndav =   3 Error = 6.67e-08 FLOPS = 3.81e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430084     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001108) T = 0.01
+ <-- Site =    0-   1 .. Mmps =   50 Ndav =   3 Error = 1.39e-14 FLOPS = 1.35e+09 Tdav = 0.00
+          .. E[  0] =    -75.99430084     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185006     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001108) T = 0.00
+Time elapsed =      0.872 | E[  3] =     -75.9943008358    -75.7018500533    -75.6830962937 | DE = -8.38e-13 | DW = 6.66895e-08
+Time sweep =        0.028 | 1.30 MFLOP/SWP
+ | Dmem = 69.5 KB (14%) | Imem = 29.4 KB (96%) | Hmem = 275 KB | Wmem = 7.38 KB | Pmem = 7.81 KB
+ | Tread = 0.000 | Twrite = 0.001 | Tfpread = 0.000 | Tfpwrite = 0.000 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 96.7 KB | cpsd = 70.8 KB
+ | Trot = 0.000 | Tctr = 0.000 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.005 | Tprt = 0.006 | Teig = 0.003 | Tblk = 0.023 | Tmve = 0.004 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Sweep =    4 | Direction =  forward | Bond dimension =   50 | Noise =  1.00e-04 | Dav threshold =  1.00e-05
+ --> Site =    0-   1 .. Mmps =    3 Ndav =   3 Error = 0.00e+00 FLOPS = 1.26e+09 Tdav = 0.00
+          .. E[  0] =    -75.99430084     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185006     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001108) T = 0.00
+ --> Site =    1-   2 .. Mmps =   10 Ndav =   3 Error = 0.00e+00 FLOPS = 4.15e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430084     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185006     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001108) T = 0.01
+ --> Site =    2-   3 .. Mmps =   31 Ndav =   3 Error = 0.00e+00 FLOPS = 2.48e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430084     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185006     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001108) T = 0.01
+ --> Site =    3-   4 .. Mmps =   50 Ndav =   3 Error = 1.83e-08 FLOPS = 5.43e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430084     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185006     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001108) T = 0.01
+ --> Site =    4-   5 .. Mmps =   49 Ndav =   3 Error = 4.48e-15 FLOPS = 1.15e+09 Tdav = 0.00
+          .. E[  0] =    -75.99430083     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185006     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001107) T = 0.00
+Time elapsed =      0.899 | E[  3] =     -75.9943008322    -75.7018500563    -75.6830962947 | DE = -1.00e-09 | DW = 1.83442e-08
+Time sweep =        0.027 | 1.30 MFLOP/SWP
+ | Dmem = 69.5 KB (14%) | Imem = 29.4 KB (96%) | Hmem = 275 KB | Wmem = 7.38 KB | Pmem = 7.81 KB
+ | Tread = 0.000 | Twrite = 0.001 | Tfpread = 0.000 | Tfpwrite = 0.000 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 97.5 KB | cpsd = 60.9 KB
+ | Trot = 0.000 | Tctr = 0.000 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.005 | Tprt = 0.005 | Teig = 0.003 | Tblk = 0.022 | Tmve = 0.004 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Sweep =    5 | Direction = backward | Bond dimension =   50 | Noise =  1.00e-04 | Dav threshold =  1.00e-05
+ <-- Site =    4-   5 .. Mmps =    3 Ndav =   3 Error = 0.00e+00 FLOPS = 9.56e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430083     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185006     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001107) T = 0.00
+ <-- Site =    3-   4 .. Mmps =   10 Ndav =   3 Error = 0.00e+00 FLOPS = 6.12e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430083     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185006     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001107) T = 0.00
+ <-- Site =    2-   3 .. Mmps =   31 Ndav =   3 Error = 0.00e+00 FLOPS = 2.62e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430083     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185006     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001107) T = 0.01
+ <-- Site =    1-   2 .. Mmps =   50 Ndav =   3 Error = 1.25e-07 FLOPS = 5.97e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430083     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185006     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001107) T = 0.01
+ <-- Site =    0-   1 .. Mmps =   50 Ndav =   3 Error = 4.85e-14 FLOPS = 1.27e+09 Tdav = 0.00
+          .. E[  0] =    -75.99430082     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001107) T = 0.00
+Time elapsed =      0.925 | E[  3] =     -75.9943008237    -75.7018500548    -75.6830962950 | DE = -2.76e-10 | DW = 1.24927e-07
+Time sweep =        0.027 | 1.29 MFLOP/SWP
+ | Dmem = 69.5 KB (14%) | Imem = 29.4 KB (96%) | Hmem = 266 KB | Wmem = 7.38 KB | Pmem = 7.81 KB
+ | Tread = 0.000 | Twrite = 0.001 | Tfpread = 0.000 | Tfpwrite = 0.000 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 95.5 KB | cpsd = 69.9 KB
+ | Trot = 0.000 | Tctr = 0.000 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.005 | Tprt = 0.006 | Teig = 0.003 | Tblk = 0.022 | Tmve = 0.004 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Sweep =    6 | Direction =  forward | Bond dimension =   50 | Noise =  1.00e-04 | Dav threshold =  1.00e-05
+ --> Site =    0-   1 .. Mmps =    3 Ndav =   3 Error = 0.00e+00 FLOPS = 1.30e+09 Tdav = 0.00
+          .. E[  0] =    -75.99430082     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001107) T = 0.00
+ --> Site =    1-   2 .. Mmps =   10 Ndav =   3 Error = 0.00e+00 FLOPS = 6.31e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430082     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001107) T = 0.00
+ --> Site =    2-   3 .. Mmps =   31 Ndav =   3 Error = 0.00e+00 FLOPS = 2.29e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430082     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001107) T = 0.01
+ --> Site =    3-   4 .. Mmps =   50 Ndav =   3 Error = 8.68e-09 FLOPS = 4.47e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430082     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001107) T = 0.01
+ --> Site =    4-   5 .. Mmps =   49 Ndav =   3 Error = 6.15e-15 FLOPS = 1.15e+09 Tdav = 0.00
+          .. E[  0] =    -75.99430081     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.00
+Time elapsed =      0.950 | E[  3] =     -75.9943008237    -75.7018500548    -75.6830962950 | DE = 1.10e-11 | DW = 8.67613e-09
+Time sweep =        0.025 | 1.28 MFLOP/SWP
+ | Dmem = 68.7 KB (14%) | Imem = 29.4 KB (96%) | Hmem = 266 KB | Wmem = 7.38 KB | Pmem = 7.81 KB
+ | Tread = 0.000 | Twrite = 0.001 | Tfpread = 0.000 | Tfpwrite = 0.000 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 96.7 KB | cpsd = 60.4 KB
+ | Trot = 0.000 | Tctr = 0.000 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.004 | Tprt = 0.005 | Teig = 0.003 | Tblk = 0.021 | Tmve = 0.004 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Sweep =    7 | Direction = backward | Bond dimension =   50 | Noise =  1.00e-04 | Dav threshold =  1.00e-05
+ <-- Site =    4-   5 .. Mmps =    3 Ndav =   3 Error = 0.00e+00 FLOPS = 1.08e+09 Tdav = 0.00
+          .. E[  0] =    -75.99430081     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.00
+ <-- Site =    3-   4 .. Mmps =   10 Ndav =   3 Error = 0.00e+00 FLOPS = 4.57e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430081     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.01
+ <-- Site =    2-   3 .. Mmps =   31 Ndav =   3 Error = 0.00e+00 FLOPS = 2.40e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430081     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.01
+ <-- Site =    1-   2 .. Mmps =   50 Ndav =   3 Error = 8.43e-08 FLOPS = 5.18e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430081     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.01
+ <-- Site =    0-   1 .. Mmps =   50 Ndav =   3 Error = 3.96e-14 FLOPS = 5.96e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430080     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.00
+Time elapsed =      0.978 | E[  3] =     -75.9943008137    -75.7018500504    -75.6830962935 | DE = 1.53e-09 | DW = 8.43276e-08
+Time sweep =        0.027 | 1.28 MFLOP/SWP
+ | Dmem = 68.7 KB (14%) | Imem = 29.4 KB (96%) | Hmem = 266 KB | Wmem = 7.38 KB | Pmem = 7.81 KB
+ | Tread = 0.000 | Twrite = 0.001 | Tfpread = 0.000 | Tfpwrite = 0.000 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 95.5 KB | cpsd = 69.9 KB
+ | Trot = 0.000 | Tctr = 0.000 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.004 | Tprt = 0.005 | Teig = 0.003 | Tblk = 0.023 | Tmve = 0.004 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Sweep =    8 | Direction =  forward | Bond dimension =   50 | Noise =  1.00e-03 | Dav threshold =  1.00e-04
+ --> Site =    0-   1 .. Mmps =    3 Ndav =   3 Error = 0.00e+00 FLOPS = 1.26e+09 Tdav = 0.00
+          .. E[  0] =    -75.99430080     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.00
+ --> Site =    1-   2 .. Mmps =   10 Ndav =   3 Error = 0.00e+00 FLOPS = 6.07e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430080     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.00
+ --> Site =    2-   3 .. Mmps =   31 Ndav =   3 Error = 0.00e+00 FLOPS = 2.40e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430080     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.01
+ --> Site =    3-   4 .. Mmps =   50 Ndav =   3 Error = 6.47e-08 FLOPS = 6.01e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430080     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185005     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309629     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.01
+ --> Site =    4-   5 .. Mmps =   49 Ndav =   3 Error = 8.33e-15 FLOPS = 1.15e+09 Tdav = 0.00
+          .. E[  0] =    -75.99430079     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185002     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309627     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.00
+Time elapsed =      1.002 | E[  3] =     -75.9943008029    -75.7018500493    -75.6830962925 | DE = 9.59e-10 | DW = 6.47291e-08
+Time sweep =        0.025 | 1.28 MFLOP/SWP
+ | Dmem = 68.7 KB (14%) | Imem = 29.4 KB (96%) | Hmem = 266 KB | Wmem = 7.38 KB | Pmem = 7.81 KB
+ | Tread = 0.000 | Twrite = 0.001 | Tfpread = 0.000 | Tfpwrite = 0.000 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 96.7 KB | cpsd = 60.7 KB
+ | Trot = 0.000 | Tctr = 0.000 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.004 | Tprt = 0.005 | Teig = 0.003 | Tblk = 0.020 | Tmve = 0.004 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Sweep =    9 | Direction = backward | Bond dimension =   50 | Noise =  1.00e-03 | Dav threshold =  1.00e-04
+ <-- Site =    4-   5 .. Mmps =    3 Ndav =   3 Error = 0.00e+00 FLOPS = 9.88e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430079     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185002     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309627     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.00
+ <-- Site =    3-   4 .. Mmps =   10 Ndav =   3 Error = 0.00e+00 FLOPS = 5.29e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430079     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185002     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309627     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.00
+ <-- Site =    2-   3 .. Mmps =   31 Ndav =   3 Error = 0.00e+00 FLOPS = 1.81e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430079     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185002     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309627     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.01
+ <-- Site =    1-   2 .. Mmps =   50 Ndav =   3 Error = 4.54e-07 FLOPS = 5.47e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430079     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185002     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309627     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.01
+ <-- Site =    0-   1 .. Mmps =   50 Ndav =   3 Error = 1.47e-14 FLOPS = 1.38e+09 Tdav = 0.00
+          .. E[  0] =    -75.99430076     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184990     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309626     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.00
+Time elapsed =      1.028 | E[  3] =     -75.9943007913    -75.7018500217    -75.6830962653 | DE = 2.72e-08 | DW = 4.53982e-07
+Time sweep =        0.026 | 1.29 MFLOP/SWP
+ | Dmem = 68.7 KB (14%) | Imem = 29.4 KB (96%) | Hmem = 275 KB | Wmem = 7.38 KB | Pmem = 7.81 KB
+ | Tread = 0.000 | Twrite = 0.001 | Tfpread = 0.000 | Tfpwrite = 0.000 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 96.7 KB | cpsd = 71.7 KB
+ | Trot = 0.000 | Tctr = 0.000 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.004 | Tprt = 0.006 | Teig = 0.003 | Tblk = 0.022 | Tmve = 0.003 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+
+Sweep =    0 | Direction =  forward | Bond dimension =   50 | Noise =  1.00e-03 | Dav threshold =  1.00e-04
+ --> Site =    0 .. Mmps =    3 Ndav =   3 Error = 0.00e+00 FLOPS = 2.46e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430076     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184990     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309626     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.00
+ --> Site =    1 .. Mmps =   10 Ndav =   3 Error = 0.00e+00 FLOPS = 3.84e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430076     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184990     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309626     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.00
+ --> Site =    2 .. Mmps =   31 Ndav =   3 Error = 0.00e+00 FLOPS = 2.21e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430076     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184990     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309626     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.01
+ --> Site =    3 .. Mmps =   50 Ndav =   3 Error = 1.09e-07 FLOPS = 4.66e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430076     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184990     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309626     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001106) T = 0.01
+ --> Site =    4 .. Mmps =   50 Ndav =   3 Error = 2.82e-14 FLOPS = 2.57e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430067     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184994     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309626     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001103) T = 0.01
+ --> Site =    5 .. Mmps =   11 Ndav =   3 Error = 2.52e-16 FLOPS = 2.04e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430067     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184994     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309626     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001103) T = 0.00
+Time elapsed =      1.059 | E[  3] =     -75.9943006658    -75.7018499447    -75.6830962646 | DW = 1.08786e-07
+Time sweep =        0.031 | 1.07 MFLOP/SWP
+ | Dmem = 61.3 KB (4%) | Imem = 18.1 KB (93%) | Hmem = 82.6 KB | Wmem = 7.38 KB | Pmem = 7.81 KB
+ | Tread = 0.001 | Twrite = 0.002 | Tfpread = 0.000 | Tfpwrite = 0.001 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 197 KB | cpsd = 140 KB
+ | Trot = 0.001 | Tctr = 0.001 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.003 | Tprt = 0.007 | Teig = 0.004 | Tblk = 0.023 | Tmve = 0.006 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Sweep =    1 | Direction = backward | Bond dimension =   50 | Noise =  1.00e-03 | Dav threshold =  1.00e-04
+ <-- Site =    5 .. Mmps =    3 Ndav =   3 Error = 0.00e+00 FLOPS = 2.62e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430067     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184994     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309626     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001103) T = 0.00
+ <-- Site =    4 .. Mmps =   10 Ndav =   3 Error = 0.00e+00 FLOPS = 2.72e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430067     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184994     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309626     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001103) T = 0.00
+ <-- Site =    3 .. Mmps =   31 Ndav =   3 Error = 0.00e+00 FLOPS = 4.16e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430067     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184994     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309626     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001103) T = 0.01
+ <-- Site =    2 .. Mmps =   50 Ndav =   3 Error = 8.45e-07 FLOPS = 2.17e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430067     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184994     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309626     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001103) T = 0.01
+ <-- Site =    1 .. Mmps =   50 Ndav =   3 Error = 5.41e-15 FLOPS = 3.54e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430057     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184979     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309612     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001102) T = 0.01
+ <-- Site =    0 .. Mmps =   11 Ndav =   3 Error = 2.99e-16 FLOPS = 1.99e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430057     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184979     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309612     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001102) T = 0.00
+Time elapsed =      1.088 | E[  3] =     -75.9943006658    -75.7018499447    -75.6830962646 | DE = -3.55e-15 | DW = 8.45117e-07
+Time sweep =        0.029 | 1.06 MFLOP/SWP
+ | Dmem = 60.7 KB (4%) | Imem = 18.1 KB (93%) | Hmem = 82.6 KB | Wmem = 7.38 KB | Pmem = 7.81 KB
+ | Tread = 0.001 | Twrite = 0.002 | Tfpread = 0.000 | Tfpwrite = 0.001 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 136 KB | cpsd = 103 KB
+ | Trot = 0.001 | Tctr = 0.001 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.003 | Tprt = 0.007 | Teig = 0.004 | Tblk = 0.023 | Tmve = 0.006 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Sweep =    2 | Direction =  forward | Bond dimension =   50 | Noise =  1.00e-03 | Dav threshold =  1.00e-04
+ --> Site =    0 .. Mmps =    3 Ndav =   3 Error = 0.00e+00 FLOPS = 1.57e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430057     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184979     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309612     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001102) T = 0.00
+ --> Site =    1 .. Mmps =   10 Ndav =   3 Error = 0.00e+00 FLOPS = 3.59e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430057     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184979     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309612     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001102) T = 0.00
+ --> Site =    2 .. Mmps =   31 Ndav =   3 Error = 0.00e+00 FLOPS = 2.08e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430057     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184979     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309612     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001102) T = 0.01
+ --> Site =    3 .. Mmps =   50 Ndav =   3 Error = 4.69e-08 FLOPS = 4.81e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430057     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184979     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309612     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001102) T = 0.01
+ --> Site =    4 .. Mmps =   49 Ndav =   3 Error = 1.46e-14 FLOPS = 3.05e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430058     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184981     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309610     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001100) T = 0.01
+ --> Site =    5 .. Mmps =   11 Ndav =   3 Error = 1.61e-16 FLOPS = 2.36e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430058     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184981     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309610     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001100) T = 0.00
+Time elapsed =      1.120 | E[  3] =     -75.9943005694    -75.7018497901    -75.6830961152 | DE = 1.49e-07 | DW = 4.68830e-08
+Time sweep =        0.032 | 1.06 MFLOP/SWP
+ | Dmem = 60.7 KB (4%) | Imem = 18.1 KB (93%) | Hmem = 82.6 KB | Wmem = 7.38 KB | Pmem = 7.81 KB
+ | Tread = 0.001 | Twrite = 0.002 | Tfpread = 0.000 | Tfpwrite = 0.001 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 156 KB | cpsd = 107 KB
+ | Trot = 0.001 | Tctr = 0.001 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.003 | Tprt = 0.007 | Teig = 0.004 | Tblk = 0.024 | Tmve = 0.006 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Sweep =    3 | Direction = backward | Bond dimension =   50 | Noise =  1.00e-03 | Dav threshold =  1.00e-04
+ <-- Site =    5 .. Mmps =    3 Ndav =   3 Error = 0.00e+00 FLOPS = 2.51e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430058     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184981     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309610     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001100) T = 0.00
+ <-- Site =    4 .. Mmps =   10 Ndav =   3 Error = 0.00e+00 FLOPS = 3.15e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430058     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184981     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309610     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001100) T = 0.00
+ <-- Site =    3 .. Mmps =   31 Ndav =   3 Error = 0.00e+00 FLOPS = 4.14e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430058     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184981     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309610     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001100) T = 0.01
+ <-- Site =    2 .. Mmps =   50 Ndav =   3 Error = 4.67e-07 FLOPS = 2.36e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430058     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184981     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309610     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001100) T = 0.01
+ <-- Site =    1 .. Mmps =   50 Ndav =   3 Error = 8.18e-15 FLOPS = 3.36e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430056     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184977     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309605     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001100) T = 0.01
+ <-- Site =    0 .. Mmps =   11 Ndav =   3 Error = 4.18e-16 FLOPS = 2.41e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430056     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184977     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309605     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001100) T = 0.00
+Time elapsed =      1.149 | E[  3] =     -75.9943005832    -75.7018498083    -75.6830961021 | DE = 1.30e-08 | DW = 4.67065e-07
+Time sweep =        0.029 | 1.05 MFLOP/SWP
+ | Dmem = 60.7 KB (4%) | Imem = 18.1 KB (93%) | Hmem = 82.6 KB | Wmem = 7.38 KB | Pmem = 7.81 KB
+ | Tread = 0.001 | Twrite = 0.001 | Tfpread = 0.000 | Tfpwrite = 0.001 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 136 KB | cpsd = 103 KB
+ | Trot = 0.001 | Tctr = 0.001 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.003 | Tprt = 0.007 | Teig = 0.004 | Tblk = 0.023 | Tmve = 0.005 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Sweep =    4 | Direction =  forward | Bond dimension =   50 | Noise =  1.00e-03 | Dav threshold =  1.00e-04
+ --> Site =    0 .. Mmps =    3 Ndav =   3 Error = 0.00e+00 FLOPS = 2.21e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430056     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184977     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309605     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001100) T = 0.00
+ --> Site =    1 .. Mmps =   10 Ndav =   3 Error = 0.00e+00 FLOPS = 2.65e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430056     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184977     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309605     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001100) T = 0.00
+ --> Site =    2 .. Mmps =   31 Ndav =   3 Error = 0.00e+00 FLOPS = 2.33e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430056     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184977     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309605     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001100) T = 0.01
+ --> Site =    3 .. Mmps =   50 Ndav =   3 Error = 5.37e-08 FLOPS = 4.55e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430056     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184977     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309605     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001100) T = 0.01
+ --> Site =    4 .. Mmps =   50 Ndav =   3 Error = 8.28e-15 FLOPS = 3.24e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430056     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184978     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309610     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001098) T = 0.01
+ --> Site =    5 .. Mmps =   11 Ndav =   3 Error = 3.02e-16 FLOPS = 1.41e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430056     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184978     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309610     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001098) T = 0.00
+Time elapsed =      1.179 | E[  3] =     -75.9943005586    -75.7018497832    -75.6830961047 | DE = -2.59e-09 | DW = 5.36558e-08
+Time sweep =        0.030 | 1.05 MFLOP/SWP
+ | Dmem = 60.7 KB (4%) | Imem = 18.1 KB (93%) | Hmem = 82.6 KB | Wmem = 7.38 KB | Pmem = 7.81 KB
+ | Tread = 0.001 | Twrite = 0.001 | Tfpread = 0.000 | Tfpwrite = 0.001 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 157 KB | cpsd = 108 KB
+ | Trot = 0.001 | Tctr = 0.001 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.003 | Tprt = 0.007 | Teig = 0.004 | Tblk = 0.024 | Tmve = 0.006 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Sweep =    5 | Direction = backward | Bond dimension =   50 | Noise =  1.00e-03 | Dav threshold =  1.00e-04
+ <-- Site =    5 .. Mmps =    3 Ndav =   3 Error = 0.00e+00 FLOPS = 2.47e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430056     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184978     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309610     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001098) T = 0.00
+ <-- Site =    4 .. Mmps =   10 Ndav =   3 Error = 0.00e+00 FLOPS = 3.23e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430056     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184978     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309610     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001098) T = 0.00
+ <-- Site =    3 .. Mmps =   31 Ndav =   3 Error = 0.00e+00 FLOPS = 2.80e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430056     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184978     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309610     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001098) T = 0.01
+ <-- Site =    2 .. Mmps =   50 Ndav =   3 Error = 9.40e-07 FLOPS = 2.58e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430056     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184978     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309610     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001098) T = 0.01
+ <-- Site =    1 .. Mmps =   49 Ndav =   3 Error = 1.50e-14 FLOPS = 2.63e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430039     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184954     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309587     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001099) T = 0.01
+ <-- Site =    0 .. Mmps =   11 Ndav =   3 Error = 1.83e-16 FLOPS = 1.69e+08 Tdav = 0.00
+          .. E[  0] =    -75.99430039     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184954     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68309587     < N=8 S=0 PG=0 > (0.999999)     < N=8 S=1 PG=0 > (0.001099) T = 0.00
+Time elapsed =      1.209 | E[  3] =     -75.9943005586    -75.7018497832    -75.6830961047 | DE = 8.99e-13 | DW = 9.40035e-07
+Time sweep =        0.029 | 1.05 MFLOP/SWP
+ | Dmem = 60.7 KB (4%) | Imem = 18.1 KB (93%) | Hmem = 82.6 KB | Wmem = 7.38 KB | Pmem = 7.81 KB
+ | Tread = 0.001 | Twrite = 0.002 | Tfpread = 0.000 | Tfpwrite = 0.001 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 135 KB | cpsd = 102 KB
+ | Trot = 0.001 | Tctr = 0.001 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.003 | Tprt = 0.007 | Teig = 0.004 | Tblk = 0.023 | Tmve = 0.006 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Sweep =    6 | Direction =  forward | Bond dimension =   50 | Noise =  0.00e+00 | Dav threshold =  1.00e-06
+ --> Site =    0 .. Mmps =    3 Ndav =   8 Error = 0.00e+00 FLOPS = 3.27e+08 Tdav = 0.00
+          .. E[  0] =    -75.99427397     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184945     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68327933     < N=8 S=0 PG=0 > (1.000000) T = 0.00
+ --> Site =    1 .. Mmps =   10 Ndav =  16 Error = 0.00e+00 FLOPS = 2.19e+08 Tdav = 0.00
+          .. E[  0] =    -75.99426993     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70184954     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68315730     < N=8 S=0 PG=0 > (1.000000) T = 0.01
+ --> Site =    2 .. Mmps =   29 Ndav =  18 Error = 3.99e-15 FLOPS = 2.96e+08 Tdav = 0.01
+          .. E[  0] =    -75.99427126     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185025     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68316620     < N=8 S=0 PG=0 > (1.000000) T = 0.01
+ --> Site =    3 .. Mmps =   50 Ndav =   3 Error = 1.95e-13 FLOPS = 4.35e+08 Tdav = 0.00
+          .. E[  0] =    -75.99427320     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185026     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68310199     < N=8 S=0 PG=0 > (1.000000) T = 0.00
+ --> Site =    4 .. Mmps =   30 Ndav =   3 Error = 1.28e-15 FLOPS = 4.02e+08 Tdav = 0.00
+          .. E[  0] =    -75.99427320     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185026     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68310199     < N=8 S=0 PG=0 > (1.000000) T = 0.00
+ --> Site =    5 .. Mmps =    9 Ndav =   3 Error = 1.66e-16 FLOPS = 9.94e+07 Tdav = 0.00
+          .. E[  0] =    -75.99427320     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185026     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68310199     < N=8 S=0 PG=0 > (1.000000) T = 0.00
+Time elapsed =      1.237 | E[  3] =     -75.9942739748    -75.7018494532    -75.6832793258 | DE = -1.83e-04 | DW = 1.95158e-13
+Time sweep =        0.029 | 2.95 MFLOP/SWP
+ | Dmem = 65.7 KB (3%) | Imem = 18.1 KB (93%) | Hmem = 76.4 KB | Wmem = 7.38 KB | Pmem = 0 B
+ | Tread = 0.001 | Twrite = 0.001 | Tfpread = 0.000 | Tfpwrite = 0.000 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 131 KB | cpsd = 87.6 KB
+ | Trot = 0.001 | Tctr = 0.001 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.003 | Tprt = 0.000 | Teig = 0.011 | Tblk = 0.022 | Tmve = 0.006 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Sweep =    7 | Direction = backward | Bond dimension =   50 | Noise =  0.00e+00 | Dav threshold =  1.00e-06
+ <-- Site =    5 .. Mmps =    3 Ndav =   3 Error = 0.00e+00 FLOPS = 1.22e+08 Tdav = 0.00
+          .. E[  0] =    -75.99427320     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185026     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68310199     < N=8 S=0 PG=0 > (1.000000) T = 0.00
+ <-- Site =    4 .. Mmps =   10 Ndav =   3 Error = 0.00e+00 FLOPS = 4.01e+08 Tdav = 0.00
+          .. E[  0] =    -75.99427320     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185026     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68310199     < N=8 S=0 PG=0 > (1.000000) T = 0.00
+ <-- Site =    3 .. Mmps =   30 Ndav =   3 Error = 5.92e-16 FLOPS = 4.62e+08 Tdav = 0.00
+          .. E[  0] =    -75.99427320     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185026     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68310199     < N=8 S=0 PG=0 > (1.000000) T = 0.00
+ <-- Site =    2 .. Mmps =   50 Ndav =   3 Error = 4.82e-14 FLOPS = 2.36e+08 Tdav = 0.00
+          .. E[  0] =    -75.99427320     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185026     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68310199     < N=8 S=0 PG=0 > (1.000000) T = 0.00
+ <-- Site =    1 .. Mmps =   30 Ndav =   3 Error = 1.47e-15 FLOPS = 2.94e+08 Tdav = 0.00
+          .. E[  0] =    -75.99427320     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185026     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68310199     < N=8 S=0 PG=0 > (1.000000) T = 0.01
+ <-- Site =    0 .. Mmps =    9 Ndav =   3 Error = 2.80e-17 FLOPS = 9.72e+07 Tdav = 0.00
+          .. E[  0] =    -75.99427320     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185026     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68310199     < N=8 S=0 PG=0 > (1.000000) T = 0.00
+Time elapsed =      1.259 | E[  3] =     -75.9942732042    -75.7018502562    -75.6831019868 | DE = 1.77e-04 | DW = 4.81589e-14
+Time sweep =        0.022 | 1.08 MFLOP/SWP
+ | Dmem = 65.7 KB (3%) | Imem = 18.1 KB (93%) | Hmem = 76.4 KB | Wmem = 7.34 KB | Pmem = 0 B
+ | Tread = 0.001 | Twrite = 0.002 | Tfpread = 0.000 | Tfpwrite = 0.001 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 115 KB | cpsd = 84.5 KB
+ | Trot = 0.000 | Tctr = 0.001 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.003 | Tprt = 0.000 | Teig = 0.004 | Tblk = 0.015 | Tmve = 0.006 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Sweep =    8 | Direction =  forward | Bond dimension =   50 | Noise =  0.00e+00 | Dav threshold =  1.00e-06
+ --> Site =    0 .. Mmps =    3 Ndav =   3 Error = 0.00e+00 FLOPS = 1.04e+08 Tdav = 0.00
+          .. E[  0] =    -75.99427320     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185026     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68310199     < N=8 S=0 PG=0 > (1.000000) T = 0.00
+ --> Site =    1 .. Mmps =   10 Ndav =   3 Error = 0.00e+00 FLOPS = 4.22e+08 Tdav = 0.00
+          .. E[  0] =    -75.99427320     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185026     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68310199     < N=8 S=0 PG=0 > (1.000000) T = 0.00
+ --> Site =    2 .. Mmps =   29 Ndav =   3 Error = 3.58e-17 FLOPS = 2.49e+08 Tdav = 0.00
+          .. E[  0] =    -75.99427320     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185026     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68310199     < N=8 S=0 PG=0 > (1.000000) T = 0.00
+ --> Site =    3 .. Mmps =   50 Ndav =   3 Error = 8.71e-16 FLOPS = 4.03e+08 Tdav = 0.00
+          .. E[  0] =    -75.99427320     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185026     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68310199     < N=8 S=0 PG=0 > (1.000000) T = 0.01
+ --> Site =    4 .. Mmps =   30 Ndav =   3 Error = 1.38e-15 FLOPS = 3.99e+08 Tdav = 0.00
+          .. E[  0] =    -75.99427320     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185026     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68310199     < N=8 S=0 PG=0 > (1.000000) T = 0.00
+ --> Site =    5 .. Mmps =    9 Ndav =   3 Error = 1.36e-16 FLOPS = 1.12e+08 Tdav = 0.00
+          .. E[  0] =    -75.99427320     < N=8 S=0 PG=0 > (1.000000)
+          .. E[  1] =    -75.70185026     < N=8 S=1 PG=0 > (1.000000)
+          .. E[  2] =    -75.68310199     < N=8 S=0 PG=0 > (1.000000) T = 0.00
+Time elapsed =      1.281 | E[  3] =     -75.9942732042    -75.7018502562    -75.6831019868 | DE = -2.20e-13 | DW = 1.37606e-15
+Time sweep =        0.022 | 1.08 MFLOP/SWP
+ | Dmem = 65.7 KB (3%) | Imem = 18.1 KB (93%) | Hmem = 76.4 KB | Wmem = 7.34 KB | Pmem = 0 B
+ | Tread = 0.001 | Twrite = 0.001 | Tfpread = 0.000 | Tfpwrite = 0.000 | Tmporead = 0.000 | Tasync = 0.000
+ | data = 131 KB | cpsd = 87.6 KB
+ | Trot = 0.000 | Tctr = 0.001 | Tint = 0.000 | Tmid = 0.000 | Tdctr = 0.000 | Tdiag = 0.001 | Tinfo = 0.001
+ | Teff = 0.003 | Tprt = 0.000 | Teig = 0.003 | Tblk = 0.016 | Tmve = 0.006 | Tdm = 0.000 | Tsplt = 0.001 | Tsvd = 0.000 | Torth = 0.000
+
+Final canonical form =  LLLLLJ 5
+DMRG Energy =  -75.994273204172032
