@@ -1,3 +1,16 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+
+import numpy as np
+from time import time
+import jax.numpy as jnp
+from jax import jit, vmap, random
+from dataclasses import dataclass, field
+# from memory_profiler import profile
+from typing import Tuple
+import jax.scipy.linalg #import eigh_tridiagonal
+from jax.scipy.linalg import inv, sqrtm
+import subprocess
 def read_CFOUR():
     f = open('data_cfour.bin', 'rb')
 
