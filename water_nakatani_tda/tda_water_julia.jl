@@ -11,13 +11,14 @@
 # Usage (from this folder; QNTensorTrains as a sibling checkout of DMRG_exc_states, or QNTENSORTRAINS_PATH):
 #   julia -t 32 tda_water_julia.jl [M] [irreps]
 #     M       pooled SU(2) bond cap (Block's spin-adapted M counts the same reduced multiplets); default 500
-#     irreps  comma list among A1,B1,A2,B2; default all four (one irrep per job is faster: see run_tda_owl.slurm)
+#     irreps  comma list among A1,B1,A2,B2; default all four (run_tda.sh runs them one at a time, one log each)
 # Environment: POLISH_GTOL (default 1e-8), POLISH_ITERS (800 CG iterations per call), SAVE_DIR (if set,
 # each polished reference is saved there as <irrep>.jls with Serialization).
 # Set OPENBLAS_NUM_THREADS=1 (QNTensorTrains' default too); threads come from `julia -t`.
 #
 # FCIDUMP is already in Fiedler order (fiedler_reorder.py), so the orbitals are used in file order.
-# Recorded run: QNTensorTrains main 64182ca, Owl (AMD EPYC 9454), 32 threads, M = 500: logs in reference_logs/.
+# Recorded run: QNTensorTrains main 64182ca, AMD EPYC 9454, 32 threads, M = 500: logs in reference_logs/.
+# Per irrep it took 2.4-3.8 h and 17-21 GB peak memory, with about 2.5 cores busy on average.
 using Pkg
 Pkg.activate(get(ENV, "QNTENSORTRAINS_PATH", joinpath(@__DIR__, "..", "..", "QNTensorTrains")); io=devnull)
 using LinearAlgebra, Printf, Random, Serialization
