@@ -41,3 +41,20 @@ The recorded run (QNTensorTrains 64182ca, 32 threads, AMD EPYC 9454) took 2.4-3.
 with about 2.5 cores busy on average, so a workstation with ~24 GB free is enough; fewer threads should cost somewhat
 more time (not measured end to end). The recorded M = 500 errors are 0.008-0.017 mHa for the references and
 0.035-1.58 mHa for the excited states (paper: 0.01-0.02 and 0.04-2.69 mHa).
+
+------------------------------------------------------
+The same calculations with QNTensorTrains-rs, the public Rust library (https://github.com/paulcazeaux/QNTensorTrains-rs, Julia
+bindings QNTT). Setup: clone it as a sibling of DMRG_exc_states (or set QNTT_RS_PATH) and build the C library once with
+  cargo build --release -p qntt-capi          (inside the checkout; QNTT_LIB overrides the library file)
+The library sizes its own thread pool: QNTT_THREADS (default all cores; Julia's -t does not apply).
+  water_block2/sa_dmrg_rs.jl         the state-average notebook as a script (SSS on the SU(2) layer, STS at S_z = 0),
+                                       with the block2 comparison (energies, occupations, STS 1-RDMs) and the dense FCI
+                                       check; QNTensorTrains-rs 0.1.0 or later, a few seconds. All six roots agree with FCI to 1e-13.
+  water_nakatani_tda/tda_water_rs.jl the DMRG-TDA reproduction of Table IV (QNTT.tda, needs QNTensorTrains-rs >= 0.1.1);
+                                       ./run_tda_rs.sh [M] [irreps] runs it one irrep at a time into logs/rs_m<M>_*.log
+                                       and summarizes them with summarize_tda.jl. Checked against its own Rust driver
+                                       at M = 25 (A1): reference and TDA roots agree to 1e-9. No M = 500 run yet.
+  water_nakatani_tda/gad_water_rs.jl GAD pinned to each irrep (QNTT.saddle_seed + QNTT.gad), the counterpart of
+                                       run_gad.sh with the Rust step controller only (see its header); QNTensorTrains-rs 0.1.0 or later.
+  water_nakatani_tda/reference_rs.jl the per-irrep SU(2) reference shared by the last two (aufbau CSF -> MALS ramp ->
+                                       MALS at the cap M -> Riemannian CG polish).
